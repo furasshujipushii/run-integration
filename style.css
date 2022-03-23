@@ -1,0 +1,251 @@
+/* *********************************** PARAMETRES GENERAUX ***************************** */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  align-items: center;
+  text-align: center;
+  margin: 0 auto;
+  background: rgb(255, 255, 255);
+}
+img {
+  height: 100%;
+  width: 100%;
+  backdrop-filter: center/cover;
+  max-width: 800px;
+}
+button {
+  background: none;
+  border: 1px solid rgba(0, 0, 0, 0.185);
+  color: rgba(27, 27, 27, 0.863);
+  border-radius: 20px;
+  padding: 10px 18px;
+  letter-spacing: 1px;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+button:hover {
+  opacity: 0.5;
+}
+h2 {
+  font-weight: 100;
+}
+p {
+  font-weight: 100;
+}
+/* ********************************************** HEADER ************************************************* */
+header {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 50% 50%;
+}
+.header-left {
+  padding: 100px 0 100px;
+  margin: auto;
+  text-align: left;
+  padding-left: 30px;
+}
+.header-left h1 {
+  font-weight: 200;
+  margin-bottom: 15px;
+}
+.header-left p {
+  font-weight: 200;
+  line-height: 30px;
+  margin-bottom: 15px;
+  padding-right: 40px;
+}
+
+/* ************************************************** MIDDLE ***************************************** */
+.middle {
+  background: rgba(249, 249, 249, 0.9);
+
+  width: 100%;
+  display: grid;
+  grid-template-columns: 40% 60%;
+}
+.middle-right {
+  padding: 80px 0 80px;
+  margin: auto;
+  text-align: left;
+  padding-left: 30px;
+  padding-right: 20px;
+}
+.middle-right h2 {
+  font-weight: 200;
+  margin-bottom: 15px;
+}
+.middle-right p {
+  font-weight: 200;
+  line-height: 30px;
+  margin-bottom: 15px;
+}
+/* ********************************************** LOWER ****************************************** */
+.lower {
+  background: rgb(255, 254, 254);
+
+  width: 100%;
+  display: grid;
+  grid-template-columns: 65% 35%;
+}
+.lower img {
+  height: 300px;
+  backdrop-filter: center;
+}
+.lower-left {
+  margin: auto;
+  text-align: left;
+  padding: 0 30px;
+}
+.lower-left h2 {
+  font-weight: 200;
+  margin-bottom: 15px;
+}
+.lower-left p {
+  font-weight: 200;
+  line-height: 30px;
+  margin-bottom: 15px;
+}
+/* **************************************** FORMULAIRE ***************************************** */
+.form {
+  position: relative;
+  width: 100%;
+  margin: 0 auto;
+  background: rgba(249, 249, 249, 0.9);
+}
+.form h2 {
+  padding-top: 30px;
+  margin-bottom: 30px;
+}
+#formulaire {
+  min-width: 300px;
+  width: 50%;
+  margin: 0 auto;
+  position: relative;
+}
+.label {
+  position: absolute;
+  display: flex;
+  justify-content: space-between;
+  padding: 0 80px;
+  width: 100%;
+  font-weight: 400;
+  font-size: 0.8em;
+}
+.input {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 15px;
+  width: 100%;
+}
+input {
+  border: 1px solid rgba(0, 0, 0, 0.185);
+  padding: 6px 10px;
+  text-align: center;
+  border-radius: 5px;
+  max-width: 50%;
+}
+textarea {
+  margin: 20px 0;
+  width: 100%;
+  border: 1px solid rgba(0, 0, 0, 0.185);
+  border-radius: 5px;
+}
+#submit {
+  margin-bottom: 20px;
+  background: none;
+  border: 1px solid rgba(0, 0, 0, 0.185);
+  color: rgba(27, 27, 27, 0.863);
+  border-radius: 20px;
+  padding: 10px 18px;
+  letter-spacing: 1px;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+#submit:hover {
+  background-color: rgb(34, 33, 33);
+  color: whitesmoke;
+}
+/* ************************************ FOOTER ******************************* */
+footer::before {
+  content: "";
+  height: 1px;
+  width: 80%;
+  left: 10%;
+  background: #000;
+  position: absolute;
+  top: 0;
+}
+footer {
+  background: rgb(245, 244, 244);
+  width: 100%;
+  height: 200px;
+  position: relative;
+}
+.footer-logos {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 60%;
+  height: 100%;
+  margin: 0 auto;
+}
+.footer-logos i {
+  font-size: 1.5em;
+  border: 1px solid black;
+  border-radius: 500px;
+  padding: 10px 10px;
+  text-align: center;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+.footer-logos i:hover {
+  opacity: 0.8;
+  transform: scale(1.1);
+}
+/* ************************* MEDIA QUERIES ********************** */
+@media screen and (max-width: 650px) {
+  header {
+    display: block;
+  }
+  header img {
+    height: 400px;
+  }
+  .middle {
+    display: block;
+  }
+  .middle-left {
+    display: none;
+  }
+  .lower:before {
+    content: "";
+    height: 1px;
+    width: 100%;
+    background: rgb(197, 196, 196);
+    position: absolute;
+    top: -20px;
+    left: 0;
+  }
+  .lower {
+    display: block;
+    position: relative;
+    padding-bottom: 30px;
+  }
+  .lower::after {
+    content: "";
+    height: 1px;
+    width: 100%;
+    background: rgb(197, 196, 196);
+    position: absolute;
+    bottom: 0px;
+    left: 0;
+  }
+  .lower-right {
+    display: none;
+  }
+  .footer-logos i {
+    font-size: 0.8em;
+  }
+}
